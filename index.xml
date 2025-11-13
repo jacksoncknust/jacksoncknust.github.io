@@ -5,14 +5,14 @@
       xmlns:dc="http://purl.org/dc/elements/1.1/" 
       version="2.0">
 <channel>
-<title>Jackson Knust&#39;s Sports Blog</title>
+<title>Jackson&#39;s Sports Blog</title>
 <link>https://your-website-url.example.com/</link>
 <atom:link href="https://your-website-url.example.com/index.xml" rel="self" type="application/rss+xml"/>
 <description>A blog about sports</description>
 <generator>quarto-1.8.25</generator>
 <lastBuildDate>Tue, 04 Nov 2025 06:00:00 GMT</lastBuildDate>
 <item>
-  <title>Duke Basketball After Coach K</title>
+  <title>Passing the Torch: How Jon Scheyer Is Sustaining Duke’s Standard</title>
   <dc:creator>Jackson Knust</dc:creator>
   <link>https://your-website-url.example.com/posts/duke-basketball-post-coach-K/</link>
   <description><![CDATA[ 
@@ -21,32 +21,54 @@
 
 
 
-<p>Duke has had a great start following the departure of Coach Mike Kryzewski</p>
+<p>Every now and again a college athletics programs are lucky enough to find the guy. On March 18th 1980 the Duke Blue Devils Men’s Basketball program did just that. They did this by hiring Head Coach Mike Kryzewski. Coach K as he was dubbed later in his coaching career took the Duke programs to levels only few programs will ever know. In his time at Duke Kryzewski would take the Blue Devils to 13 ACC Regular Season Titles, 15 ACC Tournament Titles, 13 Final Fours, and 5 National Championships including my favorite sports team of all time, the 2015 Duke Blue Devils MBB Team. Coach K achieved this feat due to many different factors including, but not limited to recruiting, efficiency, and especially in his last two decades the one-and-done player. In 2022 Coach K would retire leaving the legacy of Duke Men’s Basketball to former player and long time assistant Jon Scheyer. Scheyer so far has continued the success of Coach K’s final years and this is how he is doing it.</p>
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">library</span>(tidyverse)</span></code></pre></div></div>
+font-style: inherit;">ggplot</span>(duke, <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">aes</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">x =</span> year, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">y =</span> W.L., <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">color =</span> Coach)) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span></span>
+<span id="cb1-2">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">geom_line</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">size =</span> <span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1.2</span>) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">geom_point</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">size =</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">3</span>)</span></code></pre></div></div>
 </details>
 <div class="cell-output cell-output-stderr">
-<pre><code>── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
-✔ dplyr     1.1.4     ✔ readr     2.1.5
-✔ forcats   1.0.0     ✔ stringr   1.5.2
-✔ ggplot2   4.0.0     ✔ tibble    3.3.0
-✔ lubridate 1.9.4     ✔ tidyr     1.3.1
-✔ purrr     1.1.0     
-── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
-✖ dplyr::filter() masks stats::filter()
-✖ dplyr::lag()    masks stats::lag()
-ℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors</code></pre>
+<pre><code>Warning: Using `size` aesthetic for lines was deprecated in ggplot2 3.4.0.
+ℹ Please use `linewidth` instead.</code></pre>
 </div>
-<details class="code-fold">
-<summary>Code</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">library</span>(dplyr)</span></code></pre></div></div>
-</details>
+<div class="cell-output cell-output-stderr">
+<pre><code>`geom_line()`: Each group consists of only one observation.
+ℹ Do you need to adjust the group aesthetic?</code></pre>
+</div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="https://your-website-url.example.com/posts/duke-basketball-post-coach-K/index_files/figure-html/unnamed-chunk-1-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
 </div>
 
 
@@ -61,7 +83,7 @@ font-style: inherit;">library</span>(dplyr)</span></code></pre></div></div>
   <category>duke cbb</category>
   <guid>https://your-website-url.example.com/posts/duke-basketball-post-coach-K/</guid>
   <pubDate>Tue, 04 Nov 2025 06:00:00 GMT</pubDate>
-  <media:content url="https://your-website-url.example.com/posts/duke-basketball-post-coach-K/image.png" medium="image" type="image/png"/>
+  <media:content url="https://your-website-url.example.com/posts/duke-basketball-post-coach-K/dukedatastory.png" medium="image" type="image/png"/>
 </item>
 </channel>
 </rss>
