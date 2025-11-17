@@ -164,14 +164,14 @@ background-color: null;
 font-style: inherit;">"text"</span>,</span>
 <span id="cb2-7">           <span class="at" style="color: #657422;
 background-color: null;
-font-style: inherit;">x =</span> <span class="fl" style="color: #AD0000;
+font-style: inherit;">x =</span> <span class="dv" style="color: #AD0000;
 background-color: null;
-font-style: inherit;">2022.2</span>,</span>
+font-style: inherit;">2022</span>,</span>
 <span id="cb2-8">           <span class="at" style="color: #657422;
 background-color: null;
-font-style: inherit;">y =</span> <span class="fl" style="color: #AD0000;
+font-style: inherit;">y =</span> <span class="dv" style="color: #AD0000;
 background-color: null;
-font-style: inherit;">0.92</span>,</span>
+font-style: inherit;">1</span>,</span>
 <span id="cb2-9">           <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">label =</span> <span class="st" style="color: #20794D;
