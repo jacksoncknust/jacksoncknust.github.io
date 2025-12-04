@@ -10,7 +10,7 @@
 <atom:link href="https://your-website-url.example.com/index.xml" rel="self" type="application/rss+xml"/>
 <description>A blog about sports</description>
 <generator>quarto-1.8.25</generator>
-<lastBuildDate>Tue, 04 Nov 2025 06:00:00 GMT</lastBuildDate>
+<lastBuildDate>Thu, 04 Dec 2025 06:00:00 GMT</lastBuildDate>
 <item>
   <title>Dolph Ziggler, The Most Underrated WWE Talent Of All Time</title>
   <dc:creator>Jackson Knust</dc:creator>
@@ -21,8 +21,8 @@
 
 
 
-<p>For more than a decade, Dolph Ziggler built a reputation as one of WWE’s most reliable in ring performers. Night after night, Ziggler delivered high energy matches, made opponents look like stars, and consistently earned strong fan reactions. Yet despite that consistency, his career never reached the sustained main event level that many believed his talent deserved. Fans and critics have called him underrated for years. It is no secret that Ziggler is one of the greatest sellers of all time, but many believe that with the same main event opportunities as some of his peers, Ziggler could have been one of the best ever.</p>
-<p>This data story aims to test whether that belief holds up when performance is measured against opportunity. To begin, we look at how WWE rewarded Ziggler and his peers at both the minor and major title levels, comparing yearly match ratings to championship opportunities. These first two graphics show where elite performance was rewarded and where it began to stall.</p>
+<p>For more than a decade, Dolph Ziggler built a reputation as one of WWE’s most reliable in ring performers. Night after night, he delivered high energy matches, made opponents look like stars, and consistently earned strong fan reactions. Fans and critics alike have labeled him as underrated for years. While others cycled through main event pushes, Ziggler was often praised for his performance but left outside the very top of the card.</p>
+<p>This data story examines whether that long held belief is supported by the numbers. By comparing match ratings with championship opportunities, this project looks at whether Dolph Ziggler’s performance truly matched the level of opportunity he received. The goal is simple: to see if the data confirms what fans have said for years.</p>
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
@@ -33,7 +33,7 @@ background-color: null;
 font-style: inherit;">aes</span>(</span>
 <span id="cb1-2">  <span class="at" style="color: #657422;
 background-color: null;
-font-style: inherit;">x =</span> Minor_Title_Matches,</span>
+font-style: inherit;">x =</span> Wrestler,</span>
 <span id="cb1-3">  <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">y =</span> Avg_Match_Rating,</span>
@@ -43,103 +43,140 @@ font-style: inherit;">color =</span> Wrestler</span>
 <span id="cb1-5">)) <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">+</span></span>
-<span id="cb1-6">  <span class="fu" style="color: #4758AB;
+<span id="cb1-6"> </span>
+<span id="cb1-7">  <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">geom_jitter</span>(</span>
-<span id="cb1-7">    <span class="at" style="color: #657422;
+<span id="cb1-8">    <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">width =</span> <span class="fl" style="color: #AD0000;
 background-color: null;
-font-style: inherit;">0.25</span>,</span>
-<span id="cb1-8">    <span class="at" style="color: #657422;
+font-style: inherit;">0.15</span>,</span>
+<span id="cb1-9">    <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">height =</span> <span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">0</span>,</span>
-<span id="cb1-9">    <span class="at" style="color: #657422;
+<span id="cb1-10">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">size =</span> <span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">2.8</span></span>
+<span id="cb1-11">  ) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span></span>
+<span id="cb1-12">  </span>
+<span id="cb1-13"> </span>
+<span id="cb1-14">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">stat_summary</span>(</span>
+<span id="cb1-15">  <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">fun =</span> mean,</span>
+<span id="cb1-16">  <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">geom =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"point"</span>,</span>
+<span id="cb1-17">  <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">size =</span> <span class="dv" style="color: #AD0000;
 background-color: null;
-font-style: inherit;">3</span></span>
-<span id="cb1-10">  ) <span class="sc" style="color: #5E5E5E;
+font-style: inherit;">4</span>,</span>
+<span id="cb1-18">  <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">shape =</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">18</span>,</span>
+<span id="cb1-19">  <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">color =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"black"</span>,</span>
+<span id="cb1-20">  <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">stroke =</span> <span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1.5</span></span>
+<span id="cb1-21">) <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">+</span></span>
-<span id="cb1-11">  </span>
-<span id="cb1-12">  <span class="fu" style="color: #4758AB;
+<span id="cb1-22">  </span>
+<span id="cb1-23">  <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">scale_color_manual</span>(<span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">values =</span> <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">c</span>(</span>
-<span id="cb1-13">    <span class="st" style="color: #20794D;
+<span id="cb1-24">    <span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"Dolph Ziggler"</span> <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">=</span> <span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"magenta"</span>,</span>
-<span id="cb1-14">    <span class="st" style="color: #20794D;
+<span id="cb1-25">    <span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"Roman Reigns"</span> <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">=</span> <span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"blue"</span>,</span>
-<span id="cb1-15">    <span class="st" style="color: #20794D;
+<span id="cb1-26">    <span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"Sheamus"</span> <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">=</span> <span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"green"</span>,</span>
-<span id="cb1-16">    <span class="st" style="color: #20794D;
+<span id="cb1-27">    <span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"The Miz"</span> <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">=</span> <span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"red"</span>,</span>
-<span id="cb1-17">    <span class="st" style="color: #20794D;
+<span id="cb1-28">    <span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"Alberto Del Rio"</span> <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">=</span> <span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"gold"</span></span>
-<span id="cb1-18">  )) <span class="sc" style="color: #5E5E5E;
+<span id="cb1-29">  )) <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">+</span></span>
-<span id="cb1-19">  </span>
-<span id="cb1-20">  <span class="fu" style="color: #4758AB;
+<span id="cb1-30">  </span>
+<span id="cb1-31">  <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">labs</span>(</span>
-<span id="cb1-21">    <span class="at" style="color: #657422;
+<span id="cb1-32">    <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">title =</span> <span class="st" style="color: #20794D;
 background-color: null;
-font-style: inherit;">"Ziggler Thrives in Minor Title Matches but Rarely Escapes Them"</span>,</span>
-<span id="cb1-22">    <span class="at" style="color: #657422;
+font-style: inherit;">"Ziggler Belongs in the Conversation"</span>,</span>
+<span id="cb1-33">    <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">subtitle =</span> <span class="st" style="color: #20794D;
 background-color: null;
-font-style: inherit;">"Each point represents a season comparing minor title opportunities to match quality"</span>,</span>
-<span id="cb1-23">    <span class="at" style="color: #657422;
+font-style: inherit;">"Each dot is a season. Diamonds mark the average match rating for each wrestler."</span>,</span>
+<span id="cb1-34">    <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">x =</span> <span class="st" style="color: #20794D;
 background-color: null;
-font-style: inherit;">"Minor Title Matches in a Year"</span>,</span>
-<span id="cb1-24">    <span class="at" style="color: #657422;
+font-style: inherit;">"Wrestler"</span>,</span>
+<span id="cb1-35">    <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">y =</span> <span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"Average Match Rating"</span>,</span>
-<span id="cb1-25">    <span class="at" style="color: #657422;
+<span id="cb1-36">    <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">color =</span> <span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"Wrestler"</span>,</span>
-<span id="cb1-26">    <span class="at" style="color: #657422;
+<span id="cb1-37">    <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">caption =</span> <span class="st" style="color: #20794D;
 background-color: null;
@@ -148,19 +185,19 @@ background-color: null;
 font-style: inherit;">\n</span><span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">By Jackson Knust"</span></span>
-<span id="cb1-27">  ) <span class="sc" style="color: #5E5E5E;
+<span id="cb1-38">  ) <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">+</span></span>
-<span id="cb1-28">  </span>
-<span id="cb1-29">  <span class="fu" style="color: #4758AB;
+<span id="cb1-39">  </span>
+<span id="cb1-40">  <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">theme_minimal</span>() <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">+</span></span>
-<span id="cb1-30">  <span class="fu" style="color: #4758AB;
+<span id="cb1-41">  <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">theme</span>(</span>
-<span id="cb1-31">    <span class="at" style="color: #657422;
+<span id="cb1-42">    <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">plot.title =</span> <span class="fu" style="color: #4758AB;
 background-color: null;
@@ -173,7 +210,7 @@ background-color: null;
 font-style: inherit;">size =</span> <span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">15</span>),</span>
-<span id="cb1-32">    <span class="at" style="color: #657422;
+<span id="cb1-43">    <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">plot.subtitle =</span> <span class="fu" style="color: #4758AB;
 background-color: null;
@@ -182,7 +219,7 @@ background-color: null;
 font-style: inherit;">size =</span> <span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">11</span>),</span>
-<span id="cb1-33">    <span class="at" style="color: #657422;
+<span id="cb1-44">    <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">axis.title =</span> <span class="fu" style="color: #4758AB;
 background-color: null;
@@ -191,12 +228,12 @@ background-color: null;
 font-style: inherit;">size =</span> <span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">11</span>),</span>
-<span id="cb1-34">    <span class="at" style="color: #657422;
+<span id="cb1-45">    <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">legend.position =</span> <span class="st" style="color: #20794D;
 background-color: null;
-font-style: inherit;">"bottom"</span></span>
-<span id="cb1-35">  )</span></code></pre></div></div>
+font-style: inherit;">"none"</span></span>
+<span id="cb1-46">  )</span></code></pre></div></div>
 </details>
 <div class="cell-output-display">
 <div>
@@ -206,124 +243,141 @@ font-style: inherit;">"bottom"</span></span>
 </div>
 </div>
 </div>
-<p>While the first chart shows that Ziggler’s performance was consistently rewarded at the minor title level, it also highlights a clear ceiling on how far those opportunities went. The mid card became his home, even as his match ratings stayed among the best in the group. To see whether that performance ever translated to the very top of the card, the next graphic shifts the focus from minor championships to major title matches and main event opportunities, where WWE’s true priorities are revealed.</p>
+<p>The beeswarm shows that Dolph Ziggler was not just good in short bursts. His ratings stay consistently high across multiple seasons, placing him right at the top of this group in overall performance. While other wrestlers have years that swing more dramatically up and down, Ziggler’s results remain steady. This confirms what fans have long believed through eye test alone. Ziggler was one of the most dependable in-ring workers of his era, capable of delivering quality matches regardless of opponent or position on the card.</p>
+<p>But strong performance does not always guarantee strong opportunity in WWE. Being great inside the ring is only one part of how pushes are decided. The next graphic shifts the focus away from performance and toward how often these wrestlers were actually trusted with championship opportunities. From here, the story moves from how good Ziggler was to how he was ultimately used.</p>
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><span class="fu" style="color: #4758AB;
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1">opportunities_long <span class="ot" style="color: #003B4F;
 background-color: null;
-font-style: inherit;">ggplot</span>(wrestling_clean, <span class="fu" style="color: #4758AB;
+font-style: inherit;">&lt;-</span> wrestling_clean <span class="sc" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;">aes</span>(</span>
-<span id="cb2-2">  <span class="at" style="color: #657422;
+font-style: inherit;">|&gt;</span></span>
+<span id="cb2-2">  <span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">x =</span> Major_Title_Matches,</span>
-<span id="cb2-3">  <span class="at" style="color: #657422;
+font-style: inherit;">group_by</span>(Wrestler) <span class="sc" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;">y =</span> Avg_Match_Rating,</span>
-<span id="cb2-4">  <span class="at" style="color: #657422;
+font-style: inherit;">|&gt;</span></span>
+<span id="cb2-3">  <span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">color =</span> Wrestler</span>
-<span id="cb2-5">)) <span class="sc" style="color: #5E5E5E;
+font-style: inherit;">summarise</span>(</span>
+<span id="cb2-4">    <span class="at" style="color: #657422;
 background-color: null;
-font-style: inherit;">+</span></span>
-<span id="cb2-6">  <span class="fu" style="color: #4758AB;
+font-style: inherit;">Minor =</span> <span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">geom_jitter</span>(</span>
-<span id="cb2-7">    <span class="at" style="color: #657422;
+font-style: inherit;">sum</span>(Minor_Title_Matches),</span>
+<span id="cb2-5">    <span class="at" style="color: #657422;
 background-color: null;
-font-style: inherit;">width =</span> <span class="fl" style="color: #AD0000;
+font-style: inherit;">Major =</span> <span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">0.25</span>,</span>
-<span id="cb2-8">    <span class="at" style="color: #657422;
+font-style: inherit;">sum</span>(Major_Title_Matches),</span>
+<span id="cb2-6">    <span class="at" style="color: #657422;
 background-color: null;
-font-style: inherit;">height =</span> <span class="dv" style="color: #AD0000;
+font-style: inherit;">.groups =</span> <span class="st" style="color: #20794D;
 background-color: null;
-font-style: inherit;">0</span>,</span>
+font-style: inherit;">"drop"</span></span>
+<span id="cb2-7">  ) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">|&gt;</span></span>
+<span id="cb2-8">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">pivot_longer</span>(</span>
 <span id="cb2-9">    <span class="at" style="color: #657422;
 background-color: null;
-font-style: inherit;">size =</span> <span class="dv" style="color: #AD0000;
+font-style: inherit;">cols =</span> <span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">3</span></span>
-<span id="cb2-10">  ) <span class="sc" style="color: #5E5E5E;
+font-style: inherit;">c</span>(Minor, Major),</span>
+<span id="cb2-10">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">names_to =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Title_Level"</span>,</span>
+<span id="cb2-11">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">values_to =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Matches"</span></span>
+<span id="cb2-12">  )</span>
+<span id="cb2-13"></span>
+<span id="cb2-14"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">ggplot</span>(opportunities_long, <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">aes</span>(</span>
+<span id="cb2-15">  <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">x =</span> Matches,</span>
+<span id="cb2-16">  <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">y =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">reorder</span>(Wrestler, Matches),</span>
+<span id="cb2-17">  <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">fill =</span> Title_Level</span>
+<span id="cb2-18">)) <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">+</span></span>
-<span id="cb2-11">  </span>
-<span id="cb2-12">  <span class="fu" style="color: #4758AB;
+<span id="cb2-19">  <span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">scale_color_manual</span>(<span class="at" style="color: #657422;
+font-style: inherit;">geom_col</span>() <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span></span>
+<span id="cb2-20">  </span>
+<span id="cb2-21">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">scale_fill_manual</span>(<span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">values =</span> <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">c</span>(</span>
-<span id="cb2-13">    <span class="st" style="color: #20794D;
+<span id="cb2-22">    <span class="st" style="color: #20794D;
 background-color: null;
-font-style: inherit;">"Dolph Ziggler"</span> <span class="ot" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">=</span> <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"magenta"</span>,</span>
-<span id="cb2-14">    <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"Roman Reigns"</span> <span class="ot" style="color: #003B4F;
+font-style: inherit;">"Minor"</span> <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">=</span> <span class="st" style="color: #20794D;
 background-color: null;
-font-style: inherit;">"blue"</span>,</span>
-<span id="cb2-15">    <span class="st" style="color: #20794D;
+font-style: inherit;">"grey70"</span>,</span>
+<span id="cb2-23">    <span class="st" style="color: #20794D;
 background-color: null;
-font-style: inherit;">"Sheamus"</span> <span class="ot" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">=</span> <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"green"</span>,</span>
-<span id="cb2-16">    <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"The Miz"</span> <span class="ot" style="color: #003B4F;
+font-style: inherit;">"Major"</span> <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">=</span> <span class="st" style="color: #20794D;
 background-color: null;
-font-style: inherit;">"red"</span>,</span>
-<span id="cb2-17">    <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"Alberto Del Rio"</span> <span class="ot" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">=</span> <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"gold"</span></span>
-<span id="cb2-18">  )) <span class="sc" style="color: #5E5E5E;
+font-style: inherit;">"black"</span></span>
+<span id="cb2-24">  )) <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">+</span></span>
-<span id="cb2-19">  </span>
-<span id="cb2-20">  <span class="fu" style="color: #4758AB;
+<span id="cb2-25">  </span>
+<span id="cb2-26">  <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">labs</span>(</span>
-<span id="cb2-21">    <span class="at" style="color: #657422;
+<span id="cb2-27">    <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">title =</span> <span class="st" style="color: #20794D;
 background-color: null;
-font-style: inherit;">"Major Title Opportunities Do Not Always Follow Performance"</span>,</span>
-<span id="cb2-22">    <span class="at" style="color: #657422;
+font-style: inherit;">"Ziggler’s Opportunities Are Mostly in the Mid Card"</span>,</span>
+<span id="cb2-28">    <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">subtitle =</span> <span class="st" style="color: #20794D;
 background-color: null;
-font-style: inherit;">"Each point represents a season comparing major title opportunities to match quality"</span>,</span>
-<span id="cb2-23">    <span class="at" style="color: #657422;
+font-style: inherit;">"Total minor and major title matches by wrestler"</span>,</span>
+<span id="cb2-29">    <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">x =</span> <span class="st" style="color: #20794D;
 background-color: null;
-font-style: inherit;">"Major Title Matches in a Year"</span>,</span>
-<span id="cb2-24">    <span class="at" style="color: #657422;
+font-style: inherit;">"Total Title Matches"</span>,</span>
+<span id="cb2-30">    <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">y =</span> <span class="st" style="color: #20794D;
 background-color: null;
-font-style: inherit;">"Average Match Rating"</span>,</span>
-<span id="cb2-25">    <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">color =</span> <span class="st" style="color: #20794D;
-background-color: null;
 font-style: inherit;">"Wrestler"</span>,</span>
-<span id="cb2-26">    <span class="at" style="color: #657422;
+<span id="cb2-31">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">fill =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Title Level"</span>,</span>
+<span id="cb2-32">    <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">caption =</span> <span class="st" style="color: #20794D;
 background-color: null;
@@ -332,19 +386,19 @@ background-color: null;
 font-style: inherit;">\n</span><span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">By Jackson Knust"</span></span>
-<span id="cb2-27">  ) <span class="sc" style="color: #5E5E5E;
+<span id="cb2-33">  ) <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">+</span></span>
-<span id="cb2-28">  </span>
-<span id="cb2-29">  <span class="fu" style="color: #4758AB;
+<span id="cb2-34">  </span>
+<span id="cb2-35">  <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">theme_minimal</span>() <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">+</span></span>
-<span id="cb2-30">  <span class="fu" style="color: #4758AB;
+<span id="cb2-36">  <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">theme</span>(</span>
-<span id="cb2-31">    <span class="at" style="color: #657422;
+<span id="cb2-37">    <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">plot.title =</span> <span class="fu" style="color: #4758AB;
 background-color: null;
@@ -357,7 +411,7 @@ background-color: null;
 font-style: inherit;">size =</span> <span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">15</span>),</span>
-<span id="cb2-32">    <span class="at" style="color: #657422;
+<span id="cb2-38">    <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">plot.subtitle =</span> <span class="fu" style="color: #4758AB;
 background-color: null;
@@ -366,7 +420,7 @@ background-color: null;
 font-style: inherit;">size =</span> <span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">11</span>),</span>
-<span id="cb2-33">    <span class="at" style="color: #657422;
+<span id="cb2-39">    <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">axis.title =</span> <span class="fu" style="color: #4758AB;
 background-color: null;
@@ -375,12 +429,12 @@ background-color: null;
 font-style: inherit;">size =</span> <span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">11</span>),</span>
-<span id="cb2-34">    <span class="at" style="color: #657422;
+<span id="cb2-40">    <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">legend.position =</span> <span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"bottom"</span></span>
-<span id="cb2-35">  )</span></code></pre></div></div>
+<span id="cb2-41">  )</span></code></pre></div></div>
 </details>
 <div class="cell-output-display">
 <div>
@@ -390,7 +444,378 @@ font-style: inherit;">"bottom"</span></span>
 </div>
 </div>
 </div>
-<p>Together, these two graphics help explain why Dolph Ziggler has carried the label of “underrated” for so long. At the minor title level, Ziggler’s performance is not only strong but remarkably consistent. Year after year, his match ratings remain near the top of this group, showing that he was trusted to deliver quality matches and help elevate the mid card. WWE clearly relied on him as a dependable in ring worker who could make opponents look good and keep audiences engaged. However, when the focus shifts to major title opportunities, a very different pattern appears. Despite that same level of performance, Ziggler rarely received the sustained main event chances that his production suggests he earned. Meanwhile, wrestlers with similar or even lower match ratings found themselves in the title picture more often. This contrast highlights a key reality about how opportunity works at the highest level of WWE. Success in the ring alone is not always enough. Factors like long term branding, character alignment, and company vision appear to play a larger role in who is chosen to headline. Ziggler’s career becomes the clearest example of that disconnect. He consistently delivered when given the chance, but the door to the very top was never fully opened for long.</p>
+<p>Looking at this chart, it becomes clear how uneven Dolph Ziggler’s career really was. He did get a lot of title opportunities overall, but most of them stayed at the minor title level. That tells us WWE trusted him to work often and to keep the mid card entertaining. He was reliable, consistent, and always ready to step into a big moment when needed. At the same time, Roman Reigns’ bar tells a completely different story. Most of his opportunities came at the major title level, showing just how firmly WWE positioned him as the centerpiece of the company. The Miz and Sheamus fall somewhere in the middle, getting chances at both levels but not as extremely split as Ziggler or Roman.</p>
+<p>This graphic really shows the crossroads of Ziggler’s career. He was never ignored, but he was rarely fully elevated either. He lived in that space where he was important enough to feature, but not important enough to build the company around. From here, the story turns more specific. The next two graphs zoom in on how Ziggler performed within each level of opportunity, starting with the minor title scene where he spent most of his career.</p>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">ggplot</span>(</span>
+<span id="cb3-2">  wrestling_clean,</span>
+<span id="cb3-3">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">aes</span>(</span>
+<span id="cb3-4">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">x =</span> Minor_Title_Matches,</span>
+<span id="cb3-5">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">y =</span> Avg_Match_Rating,</span>
+<span id="cb3-6">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">color =</span> Wrestler</span>
+<span id="cb3-7">  )</span>
+<span id="cb3-8">) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span></span>
+<span id="cb3-9">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">geom_jitter</span>(</span>
+<span id="cb3-10">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">width =</span> <span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0.25</span>,</span>
+<span id="cb3-11">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">height =</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span>,</span>
+<span id="cb3-12">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">size =</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">3</span></span>
+<span id="cb3-13">  ) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span></span>
+<span id="cb3-14">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">scale_color_manual</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">values =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">c</span>(</span>
+<span id="cb3-15">    <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Dolph Ziggler"</span> <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">=</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"magenta"</span>,</span>
+<span id="cb3-16">    <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Roman Reigns"</span> <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">=</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"blue"</span>,</span>
+<span id="cb3-17">    <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Sheamus"</span> <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">=</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"green"</span>,</span>
+<span id="cb3-18">    <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"The Miz"</span> <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">=</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"red"</span>,</span>
+<span id="cb3-19">    <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Alberto Del Rio"</span> <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">=</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"gold"</span></span>
+<span id="cb3-20">  )) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span></span>
+<span id="cb3-21">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">labs</span>(</span>
+<span id="cb3-22">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">title =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Ziggler Thrives in the Mid Card but Rarely Escapes It"</span>,</span>
+<span id="cb3-23">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">subtitle =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Each point represents a season comparing minor title opportunities to match quality"</span>,</span>
+<span id="cb3-24">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">x =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Minor Title Matches in a Year"</span>,</span>
+<span id="cb3-25">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">y =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Average Match Rating"</span>,</span>
+<span id="cb3-26">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">color =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Wrestler"</span>,</span>
+<span id="cb3-27">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">caption =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Source: cagematch.net</span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">\n</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">By Jackson Knust"</span></span>
+<span id="cb3-28">  ) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span></span>
+<span id="cb3-29">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">theme_minimal</span>() <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span></span>
+<span id="cb3-30">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">theme</span>(</span>
+<span id="cb3-31">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">plot.title =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">element_text</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">face =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"bold"</span>, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">size =</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">15</span>),</span>
+<span id="cb3-32">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">plot.subtitle =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">element_text</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">size =</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">11</span>),</span>
+<span id="cb3-33">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">axis.title =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">element_text</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">size =</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">11</span>),</span>
+<span id="cb3-34">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">legend.position =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"bottom"</span></span>
+<span id="cb3-35">  )</span></code></pre></div></div>
+</details>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="https://your-website-url.example.com/posts/Dolph-Ziggler-WWE-Underrated/index_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>This graphic shows exactly where Dolph Ziggler spent the bulk of his career. Even as his match ratings stay near the top of the group, his minor title opportunities remain consistently high. That tells us WWE trusted him to be the backbone of the mid card. He was the one who could be relied on to make championships feel important, to elevate opponents, and to keep fans engaged night after night. However, what stands out is how rarely that success led to a true step up. Other wrestlers move in and out of this space, but Ziggler stays planted in it. The data shows he did everything right in this role, yet that performance did not open the door to anything more permanent at the top.</p>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">ggplot</span>(wrestling_clean, <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">aes</span>(</span>
+<span id="cb4-2">  <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">x =</span> Major_Title_Matches,</span>
+<span id="cb4-3">  <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">y =</span> Avg_Match_Rating,</span>
+<span id="cb4-4">  <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">color =</span> Wrestler</span>
+<span id="cb4-5">)) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span></span>
+<span id="cb4-6">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">geom_jitter</span>(</span>
+<span id="cb4-7">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">width =</span> <span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0.25</span>,</span>
+<span id="cb4-8">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">height =</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span>,</span>
+<span id="cb4-9">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">size =</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">3</span></span>
+<span id="cb4-10">  ) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span></span>
+<span id="cb4-11">  </span>
+<span id="cb4-12">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">scale_color_manual</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">values =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">c</span>(</span>
+<span id="cb4-13">    <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Dolph Ziggler"</span> <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">=</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"magenta"</span>,</span>
+<span id="cb4-14">    <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Roman Reigns"</span> <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">=</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"blue"</span>,</span>
+<span id="cb4-15">    <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Sheamus"</span> <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">=</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"green"</span>,</span>
+<span id="cb4-16">    <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"The Miz"</span> <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">=</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"red"</span>,</span>
+<span id="cb4-17">    <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Alberto Del Rio"</span> <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">=</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"gold"</span></span>
+<span id="cb4-18">  )) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span></span>
+<span id="cb4-19">  </span>
+<span id="cb4-20">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">labs</span>(</span>
+<span id="cb4-21">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">title =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Major Title Opportunities Do Not Always Follow Performance"</span>,</span>
+<span id="cb4-22">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">subtitle =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Each point represents a season comparing major title opportunities to match quality"</span>,</span>
+<span id="cb4-23">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">x =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Major Title Matches in a Year"</span>,</span>
+<span id="cb4-24">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">y =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Average Match Rating"</span>,</span>
+<span id="cb4-25">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">color =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Wrestler"</span>,</span>
+<span id="cb4-26">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">caption =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Source: cagematch.net</span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">\n</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">By Jackson Knust"</span></span>
+<span id="cb4-27">  ) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span></span>
+<span id="cb4-28">  </span>
+<span id="cb4-29">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">theme_minimal</span>() <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span></span>
+<span id="cb4-30">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">theme</span>(</span>
+<span id="cb4-31">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">plot.title =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">element_text</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">face =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"bold"</span>, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">size =</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">15</span>),</span>
+<span id="cb4-32">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">plot.subtitle =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">element_text</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">size =</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">11</span>),</span>
+<span id="cb4-33">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">axis.title =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">element_text</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">size =</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">11</span>),</span>
+<span id="cb4-34">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">legend.position =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"bottom"</span></span>
+<span id="cb4-35">  )</span></code></pre></div></div>
+</details>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="https://your-website-url.example.com/posts/Dolph-Ziggler-WWE-Underrated/index_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>When the focus shifts to major title opportunities, the gap becomes impossible to ignore. Even in seasons where Ziggler’s match ratings matched or exceeded those of his peers, he rarely appears in the major title picture. Roman Reigns, by contrast, dominates this space regardless of fluctuations in performance, showing how clearly WWE committed to him as the face of the company. The Miz and Alberto Del Rio appear more often than Ziggler, even with less consistent in ring results. This final graphic brings the entire argument together. Ziggler proved again and again that he belonged at the highest level, but sustained main event opportunity never followed his production.</p>
+<p>In the end, the numbers line up with what many fans have been saying for years. Dolph Ziggler was one of the most consistent and reliable performers of his era, with match ratings that put him right alongside or even ahead of some of WWE’s biggest names. He showed up, delivered, and made others look better every time he stepped in the ring. What the data also shows is that this level of performance did not translate into the same kind of sustained main event opportunity that others received. Ziggler was trusted to work often, but rarely trusted to carry the very top of the card for long.</p>
+<p>That gap between what he did in the ring and how often he was truly given the ball is what makes him feel so underrated. This project does not say that Roman Reigns, The Miz, or anyone else did not deserve their chances. Instead, it shows that Ziggler had a strong case to be in that conversation more than he was. When you look at performance and opportunity side by side, it is hard to argue that he got everything his work might have earned. If anything, the data only strengthens the idea that Dolph Ziggler was one of the most underused and under rewarded talents WWE has ever had.</p>
 
 
 
@@ -402,7 +827,7 @@ font-style: inherit;">"bottom"</span></span>
   <category>Sports Data</category>
   <category>WWE History</category>
   <guid>https://your-website-url.example.com/posts/Dolph-Ziggler-WWE-Underrated/</guid>
-  <pubDate>Tue, 04 Nov 2025 06:00:00 GMT</pubDate>
+  <pubDate>Thu, 04 Dec 2025 06:00:00 GMT</pubDate>
   <media:content url="https://your-website-url.example.com/posts/Dolph-Ziggler-WWE-Underrated/image.png" medium="image" type="image/png" height="144" width="144"/>
 </item>
 <item>
